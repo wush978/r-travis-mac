@@ -6,6 +6,7 @@ set -e
 # Comment out this line for quieter output:
 set -x
 
+R_VERSION=3.2.2
 CRAN=${CRAN:-"http://cran.rstudio.com"}
 BIOC=${BIOC:-"http://bioconductor.org/biocLite.R"}
 BIOC_USE_DEVEL=${BIOC_USE_DEVEL:-"TRUE"}
@@ -105,11 +106,11 @@ BootstrapLinuxOptions() {
 
 BootstrapMac() {
     # Install from latest CRAN binary build for OS X
-    wget ${CRAN}/bin/macosx/R-3.2.0.pkg  -O /tmp/R-3.2.0.pkg
+    wget ${CRAN}/bin/macosx/R-$R_VERSION.pkg  -O /tmp/R-$R_VERSION.pkg
 
     echo "Installing OS X binary package for R"
-    sudo installer -pkg "/tmp/R-3.2.0.pkg" -target /
-    rm "/tmp/R-3.2.0.pkg"
+    sudo installer -pkg "/tmp/R-$R_VERSION.pkg" -target /
+    rm "/tmp/R-$R_VERSION.pkg"
 
     # Process options
     BootstrapMacOptions
