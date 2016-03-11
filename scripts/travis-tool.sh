@@ -6,7 +6,7 @@ set -e
 # Comment out this line for quieter output:
 set -x
 
-R_VERSION=3.2.3
+R_VERSION=3.2.4
 CRAN=${CRAN:-"http://cran.rstudio.com"}
 BIOC=${BIOC:-"http://bioconductor.org/biocLite.R"}
 BIOC_USE_DEVEL=${BIOC_USE_DEVEL:-"TRUE"}
