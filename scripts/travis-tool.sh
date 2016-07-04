@@ -117,11 +117,7 @@ BootstrapMac() {
 BootstrapMacOptions() {
     if [[ -n "$BOOTSTRAP_LATEX" ]]; then
         # TODO: Install MacTeX.pkg once there's enough disk space
-<<<<<<< HEAD
-        MACTEX=MacTeX.pkg
-=======
         MACTEX=BasicTeX.pkg
->>>>>>> wertion/master
         wget http://ctan.math.utah.edu/ctan/tex-archive/systems/mac/mactex/$MACTEX -O "/tmp/$MACTEX"
 
         echo "Installing OS X binary package for MacTeX"
